@@ -1,3 +1,3 @@
-# React, Redux, Sass Boilerplate
-This boilerplate is for my personal use.
+# FCC: Markdown Previewer
+A markdown previewer for the free code camp certification
 

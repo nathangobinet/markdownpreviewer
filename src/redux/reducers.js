@@ -1,5 +1,5 @@
-import marked from 'marked';
-import dompurify from 'dompurify';
+import { parse, setOptions } from 'marked';
+import { sanitize } from 'dompurify';
 
 const PREVIEW = 'PREVIEW';
 
@@ -49,14 +49,14 @@ And here. | Okay. | I think we get it.
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)`;
 
-marked.setOptions({
+setOptions({
   breaks: true,
 });
 
 function getPreview(markdown) {
   return {
     markdown,
-    preview: dompurify.sanitize(marked.parse(markdown)),
+    preview: sanitize(parse(markdown)),
   };
 }
 

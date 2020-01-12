@@ -19,7 +19,6 @@ const PreviewMapStateToProps = (state) => ({
   preview: state.preview,
 });
 
-
 const EditorContainer = connect(EditorMapStateToProps, EditorMapDispatchToProps)(Editor);
 const PreviewContainer = connect(PreviewMapStateToProps, null)(Preview);
 

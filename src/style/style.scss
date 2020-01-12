@@ -28,12 +28,21 @@ body {
   color: $light-color;
 }
 
+.reduce {
+  height: calc(20vh - 95px)!important;
+}
+
+.enlarge {
+  height: calc(80vh - 95px)!important;
+}
+
 #editor {
   resize: none;
   font-family: 'Courier New', Courier, monospace;
 }
 
 #preview {
+  
   overflow-y: auto;
 }
 

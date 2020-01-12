@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { Component } from '../redux/reducers';
+import SplitPanel from './SplitPanel';
+// import {  } from '../redux/reducers';
 
 // TODO: Import components then connect them to props
 
@@ -14,9 +15,7 @@ const mapDispatchToProps = (dispatch) => ({
   ),
 });
 
-const Container = connect(mapStateToProps, mapDispatchToProps)(
-  // Component
-);
+const Container = connect(mapStateToProps, mapDispatchToProps)(SplitPanel);
 
 const App = () => (
   <div>

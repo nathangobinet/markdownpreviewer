@@ -11,11 +11,16 @@ const EditorMapDispatchToProps = (dispatch) => ({
   ),
 });
 
-const PreviewMapStateToProps = (preview) => ({
-  preview,
+const EditorMapStateToProps = (state) => ({
+  input: state.markdown,
 });
 
-const EditorContainer = connect(null, EditorMapDispatchToProps)(Editor);
+const PreviewMapStateToProps = (state) => ({
+  preview: state.preview,
+});
+
+
+const EditorContainer = connect(EditorMapStateToProps, EditorMapDispatchToProps)(Editor);
 const PreviewContainer = connect(PreviewMapStateToProps, null)(Preview);
 
 const App = () => (
@@ -36,7 +41,7 @@ const App = () => (
                 Made with
         <span aria-label="love" role="img"> ♥️ </span>
         <span>by </span>
-        <a href="https://github.com/nathangobinet/markdownpreviewer" target="_blank" without rel="noopener noreferrer">Nathan Gobinet</a>
+        <a href="https://github.com/nathangobinet/markdownpreviewer" target="_blank" rel="noopener noreferrer">Nathan Gobinet</a>
       </footer>
     </div>
   </div>
